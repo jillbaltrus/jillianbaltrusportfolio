@@ -35,7 +35,10 @@ export default function PortfolioCard({ cardData }) {
       <ImageListItemBar
         sx={{
           height: "65px",
-          "& .MuiImageListItemBar-title": { fontSize: "22px", fontFamily: "Playfair Display" },
+          "& .MuiImageListItemBar-title": {
+            fontSize: "22px",
+            fontFamily: "Playfair Display",
+          },
           background:
             "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
         }}
