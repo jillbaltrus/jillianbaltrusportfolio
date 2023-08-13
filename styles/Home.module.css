@@ -1,0 +1,98 @@
+.container {
+  min-height: 100vh;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleContainer {
+  margin: 2rem;
+}
+
+.gradientBox {
+  background: linear-gradient(244deg,#decf86,#f17aa0,#e099b0,#e3b36c);
+	background-size: 400% 400%;
+	animation: gradient 22s ease infinite;
+  width: 100%;
+	min-height: 30vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.title {
+  margin: 2rem;
+  margin-bottom: 0rem;
+  line-height: 1.15;
+  font-size: 3.6rem;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  font-family: 'EB Garamond', serif;
+}
+
+.whitePlayfair {
+  letter-spacing: .1rem;
+  font-size: 1.0rem;
+  font-weight: normal;
+  text-align: center;
+  max-width: 700px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+}
+
+.whiteDigits {
+  letter-spacing: .1rem;
+  font-size: 1.0rem;
+  font-weight: normal;
+  text-align: center;
+  max-width: 750px;
+  color: #fff;
+  font-family: 'Lora', serif;
+  text-decoration: none;
+}
+
+.bio {
+  margin: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  letter-spacing: .12rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: center;
+  max-width: 750px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
