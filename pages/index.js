@@ -58,14 +58,14 @@ export default function Home() {
                   <a href="mailto:baltrus.j@northeastern.edu">
                     <Box display="flex" flexDirection={"row"}>
                       <EmailIcon sx={{ fill: "#FFF", width: "40px" }} />
-                      <Typography className={styles.whitePlayfair}>
+                      <Typography className={styles.whitePlayfair} sx={{ fontFamily: 'Playfair Display' }}>
                         baltrus.j@northeastern.edu
                       </Typography>
                     </Box>
                   </a>
                   <Box display="flex" flexDirection={"row"}>
                     <PhoneIcon sx={{ fill: "#FFF", width: "40px" }} />
-                    <Typography className={styles.whiteDigits}>
+                    <Typography className={styles.whiteDigits} sx={{ marginRight: 3, fontFamily: 'Lora' }}>
                       +1 617-462-9266
                     </Typography>
                   </Box>
@@ -74,7 +74,7 @@ export default function Home() {
                   <a href="https://github.com/jillbaltrus">
                     <Box display="flex" flexDirection={"row"}>
                       <GitHubIcon sx={{ fill: "#FFF", width: "40px" }} />
-                      <Typography className={styles.whitePlayfair}>
+                      <Typography className={styles.whitePlayfair} sx={{ fontFamily: 'Playfair Display' }}>
                         jillbaltrus
                       </Typography>
                     </Box>
@@ -84,7 +84,7 @@ export default function Home() {
                       <LinkedInIcon sx={{ fill: "#FFF", width: "40px" }} />
                       <Typography
                         className={styles.whitePlayfair}
-                        sx={{ marginRight: 3 }}
+                        sx={{ fontFamily: 'Playfair Display' }}
                       >
                         Jillian Baltrus
                       </Typography>
