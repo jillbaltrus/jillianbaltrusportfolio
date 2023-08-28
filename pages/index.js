@@ -91,7 +91,7 @@ export default function Home() {
                       <LinkedInIcon sx={{ fill: "#FFF", width: "40px" }} />
                       <Typography
                         className={styles.whitePlayfair}
-                        sx={{ fontFamily: 'Playfair Display' }}
+                        sx={{ fontFamily: 'Playfair Display', textAlign: "left"}}
                       >
                         Jillian Baltrus
                       </Typography>
