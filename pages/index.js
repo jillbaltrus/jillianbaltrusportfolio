@@ -2,13 +2,15 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PhoneIcon from "@mui/icons-material/Phone";
-import { Avatar, Box, ImageList, Typography } from "@mui/material";
+import { Avatar, Box, ImageList, Typography, useMediaQuery } from "@mui/material";
 import Head from "next/head";
 import PortfolioCard from "../components/portfolio-card";
 import data from "../public/data";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const mdAndUp = useMediaQuery('(min-width:768px)');
+
   return (
     <div>
       <Head>
@@ -26,12 +28,17 @@ export default function Home() {
         <div className={styles.gradientBox}>
           <Box
             display="flex"
-            flexDirection={"row"}
+            flexDirection={mdAndUp ? "row" : "column"}
             alignItems="center"
             justifyContent="center"
+            paddingTop={3}
           >
             <Avatar
-              sx={{ width: 150, height: 150, border: "3px solid white" }}
+              sx={{ width: 150, 
+                height: 150, 
+                border: "3px solid white",
+                marginLeft: 2
+              }}
               src={"/images/avatar.png"}
               alt="Jillian"
             />
@@ -43,7 +50,7 @@ export default function Home() {
             >
               <h1 className={styles.title}>Hi, I'm Jillian.</h1>
               <h3 className={styles.bio}>
-                I'm an aspiring software engineer earning my B.S. in Computer
+                I'm a software engineer earning my B.S. in Computer
                 Science from Northeastern University, expected August 2023. This
                 portfolio is a collection of my significant technical projects
                 from the past few years. Please take a look, and reach out if
@@ -96,7 +103,7 @@ export default function Home() {
           </Box>
         </div>
         <div className={styles.container}>
-          <ImageList variant="masonry" cols={2} gap={36}>
+          <ImageList variant="masonry" cols={mdAndUp ? 2 : 1} gap={36}>
             {data.map((item) => (
               <PortfolioCard key={item.id} cardData={item} />
             ))}

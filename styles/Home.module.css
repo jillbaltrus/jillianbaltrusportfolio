@@ -38,6 +38,7 @@
 
 .title {
   margin: 2rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
   line-height: 1.15;
   font-size: 3.6rem;
@@ -45,6 +46,13 @@
   color: #fff;
   text-align: center;
   font-family: 'EB Garamond', serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    margin: 2rem;
+    margin-bottom: 0rem;
+  }
 }
 
 .whitePlayfair {
