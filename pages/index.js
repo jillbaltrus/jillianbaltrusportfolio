@@ -2,29 +2,27 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PhoneIcon from "@mui/icons-material/Phone";
-import { Avatar, Box, ImageList, Typography, useMediaQuery } from "@mui/material";
-import Head from "next/head";
+import {
+  Avatar,
+  Box,
+  ImageList,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
+import { Container } from "../components/container";
+import { DocumentHead } from "../components/head";
 import PortfolioCard from "../components/portfolio-card";
 import data from "../public/data";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const mdAndUp = useMediaQuery('(min-width:768px)');
+  const mdAndUp = useMediaQuery("(min-width:768px)");
 
   return (
     <div>
-      <Head>
-        <title>Jillian Baltrus Portfolio</title>
-        <link rel="icon" href="/images/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Lora&family=Playfair+Display&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+      <DocumentHead />
 
-      <main>
+      <Container>
         <div className={styles.gradientBox}>
           <Box
             display="flex"
@@ -34,10 +32,11 @@ export default function Home() {
             paddingTop={3}
           >
             <Avatar
-              sx={{ width: 150, 
-                height: 150, 
+              sx={{
+                width: 150,
+                height: 150,
                 border: "3px solid white",
-                marginLeft: 2
+                marginTop: mdAndUp ? "0" : "20px",
               }}
               src={"/images/avatar.png"}
               alt="Jillian"
@@ -50,29 +49,35 @@ export default function Home() {
             >
               <h1 className={styles.title}>Hi, I'm Jillian.</h1>
               <h3 className={styles.bio}>
-                I'm a software engineer earning my B.S. in Computer
-                Science from Northeastern University, expected August 2023. This
-                portfolio is a collection of my significant technical projects
-                from the past few years. Please take a look, and reach out if
-                you would like to connect!
+                I'm a software engineer earning my B.S. in Computer Science from
+                Northeastern University, expected August 2023. This portfolio is
+                a collection of my significant technical projects from the past
+                few years. Please take a look, and reach out if you would like
+                to connect!
               </h3>
               <Box
                 display="flex"
                 flexDirection={"row"}
                 sx={{ marginBottom: 2 }}
               >
-                <Box sx={{ flexDirection: "column", marginRight: 3 }}>
+                <Box sx={{ flexDirection: "column", marginRight: 2 }}>
                   <a href="mailto:baltrus.j@northeastern.edu">
                     <Box display="flex" flexDirection={"row"}>
                       <EmailIcon sx={{ fill: "#FFF", width: "40px" }} />
-                      <Typography className={styles.whitePlayfair} sx={{ fontFamily: 'Playfair Display' }}>
+                      <Typography
+                        className={styles.whitePlayfair}
+                        sx={{ fontFamily: "Playfair Display" }}
+                      >
                         baltrus.j@northeastern.edu
                       </Typography>
                     </Box>
                   </a>
                   <Box display="flex" flexDirection={"row"}>
                     <PhoneIcon sx={{ fill: "#FFF", width: "40px" }} />
-                    <Typography className={styles.whiteDigits} sx={{ marginRight: 3, fontFamily: 'Lora' }}>
+                    <Typography
+                      className={styles.whiteDigits}
+                      sx={{ marginRight: 3, fontFamily: "Lora" }}
+                    >
                       +1 617-462-9266
                     </Typography>
                   </Box>
@@ -81,7 +86,10 @@ export default function Home() {
                   <a href="https://github.com/jillbaltrus">
                     <Box display="flex" flexDirection={"row"}>
                       <GitHubIcon sx={{ fill: "#FFF", width: "40px" }} />
-                      <Typography className={styles.whitePlayfair} sx={{ fontFamily: 'Playfair Display' }}>
+                      <Typography
+                        className={styles.whitePlayfair}
+                        sx={{ fontFamily: "Playfair Display" }}
+                      >
                         jillbaltrus
                       </Typography>
                     </Box>
@@ -91,7 +99,10 @@ export default function Home() {
                       <LinkedInIcon sx={{ fill: "#FFF", width: "40px" }} />
                       <Typography
                         className={styles.whitePlayfair}
-                        sx={{ fontFamily: 'Playfair Display', textAlign: "left"}}
+                        sx={{
+                          fontFamily: "Playfair Display",
+                          textAlign: "left",
+                        }}
                       >
                         Jillian Baltrus
                       </Typography>
@@ -109,7 +120,8 @@ export default function Home() {
             ))}
           </ImageList>
         </div>
-      </main>
+      </Container>
+
       <style jsx global>{`
         html,
         body {

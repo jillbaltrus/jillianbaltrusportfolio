@@ -28,7 +28,8 @@ export default function PortfolioCard({ cardData }) {
         loading="lazy"
         style={{
           opacity: hover ? 0.7 : 1,
-          cursor: hover ? "pointer" : "default",
+          cursor: "pointer",
+          borderRadius: '4px',
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -41,8 +42,9 @@ export default function PortfolioCard({ cardData }) {
             fontSize: "22px",
             fontFamily: "Playfair Display",
           },
-          background:
-            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+          borderBottomLeftRadius: '4px',
+          borderBottomRightRadius: '4px',
+          background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
         }}
         title={cardData.title}
         onClick={handleModalOpen}
