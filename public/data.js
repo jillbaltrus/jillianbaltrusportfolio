@@ -40,14 +40,23 @@ export default [
     skills: ["C#", "Unity3D"],
   },
   {
-    id: 7,
-    title: "Bored in Boston",
-    image: "images/boredinboston1.png",
-    description:
-      "Bored in Boston is an interactive terminal program used to generate a business recommendation in the Boston area based on Yelp data and user input. The first step in developing this project was writing a Python web scraper script to generate CSV files of Yelp data using Selenium. The Java program translates the CSV file data into business objects. The program runs using a model and controller, which the user interacts with via the command line. By responding to prompts, the user filters down businesses and eventually receives a personalized recommendation.",
+    id: 8,
+    title: "Covid's Effect on Public Transit Ridership",
+    image: "images/bluebikemaps.png",
+    description: "This project was a comprehensive research investigation about how the COVID-19 pandemic affected public transit trends in Boston. My 4-person team utilized Python and various libraries to analyze publicly available MBTA and Bluebike datasets. We found that the stay-at-home order in Spring 2020 was followed by a huge dip in public transit ridership, unsurprisingly. Ridership numbers began climbing again in the summertime. We found that BlueBike ridership decreased less than the T or bus, likely because commuters felt safer in an open space where they could control their proximity to others. Please reach out if you are interested in learning more or reading our study.",
     year: 2021,
-    otherImages: ["images/boredinboston2.png"],
-    skills: ["Java", "Python", "Selenium"],
+    otherImages: ["images/busgraph.png", "images/mbtagraph.png", "images/pythonmapcalculations.png", "images/bluebikesratios.png"],
+    skills: ["Python", "Pandas", "Matplotlib", "Plotly", "Geopandas"],
+  },
+  {
+    id: 5,
+    title: "Marble Solitaire",
+    image: "images/marblesolitaire.png",
+    description:
+      "Marble Solitaire is a command line single-player game built with Java, based on the real-world board game Marble Solitaire. Users can play with completeley customizable board configurations. The program uses a model and controller to handle game logic and user input.",
+    year: 2020,
+    otherImages: [],
+    skills: ["Java"],
   },
   {
     id: 4,
@@ -70,13 +79,13 @@ export default [
     skills: ["React", "CSS", "Bootstrap"],
   },
   {
-    id: 5,
-    title: "Marble Solitaire",
-    image: "images/marblesolitaire.png",
+    id: 7,
+    title: "Bored in Boston",
+    image: "images/boredinboston1.png",
     description:
-      "Marble Solitaire is a command line single-player game built with Java, based on the real-world board game Marble Solitaire. Users can play with completeley customizable board configurations. The program uses a model and controller to handle game logic and user input.",
-    year: 2020,
-    otherImages: [],
-    skills: ["Java"],
+      "Bored in Boston is an interactive terminal program used to generate a business recommendation in the Boston area based on Yelp data and user input. The first step in developing this project was writing a Python web scraper script to generate CSV files of Yelp data using Selenium. The Java program translates the CSV file data into business objects. The program runs using a model and controller, which the user interacts with via the command line. By responding to prompts, the user filters down businesses and eventually receives a personalized recommendation.",
+    year: 2021,
+    otherImages: ["images/boredinboston2.png"],
+    skills: ["Java", "Python", "Selenium"],
   },
 ];
