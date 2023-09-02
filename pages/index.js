@@ -49,9 +49,9 @@ export default function Home() {
             >
               <h1 className={styles.title}>Hi, I'm Jillian.</h1>
               <h3 className={styles.bio}>
-                I'm a software engineer earning my B.S. in Computer Science from
-                Northeastern University, expected August 2023. This portfolio is
-                a collection of my significant technical projects from the past
+                I'm a software engineer who recently earned my B.S. in Computer
+                Science from Northeastern University. This portfolio is a
+                collection of my significant technical projects from the past
                 few years. Please take a look, and reach out if you would like
                 to connect!
               </h3>
